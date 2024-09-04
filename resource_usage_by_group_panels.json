@@ -1,0 +1,479 @@
+{
+  "visualizations": {
+    "viz_cmm_avg_cpu": {
+      "type": "splunk.column",
+      "options": {
+        "legendDisplay": "off",
+        "y": "> primary | frameBySeriesNames('AvgCPU')"
+      },
+      "context": {
+        "gaugeColorRangeValueContext": [
+          {
+            "to": 10,
+            "value": "#5fbcff"
+          },
+          {
+            "from": 10,
+            "to": 30,
+            "value": "#4beba8"
+          },
+          {
+            "from": 30,
+            "to": 50,
+            "value": "#f4df7a"
+          },
+          {
+            "from": 50,
+            "to": 70,
+            "value": "#fc9850"
+          },
+          {
+            "from": 70,
+            "to": 100,
+            "value": "#ff7152"
+          }
+        ]
+      },
+      "dataSources": {
+        "primary": "ds_cmm_avg_cpu"
+      },
+      "eventHandlers": [
+        {
+          "type": "drilldown.linkToSearch",
+          "options": {
+            "type": "auto",
+            "newTab": false
+          }
+        }
+      ],
+      "title": "CMM - Average CPU Usage by Host",
+      "showProgressBar": true,
+      "showLastUpdated": false,
+      "hideWhenNoData": true
+    },
+    "viz_cmm_avg_mem": {
+      "type": "splunk.column",
+      "options": {
+        "legendDisplay": "off",
+        "y": "> primary | frameBySeriesNames('AvgMem')"
+      },
+      "context": {
+        "gaugeColorRangeValueContext": [
+          {
+            "to": 10,
+            "value": "#5fbcff"
+          },
+          {
+            "from": 10,
+            "to": 30,
+            "value": "#4beba8"
+          },
+          {
+            "from": 30,
+            "to": 50,
+            "value": "#f4df7a"
+          },
+          {
+            "from": 50,
+            "to": 70,
+            "value": "#fc9850"
+          },
+          {
+            "from": 70,
+            "to": 100,
+            "value": "#ff7152"
+          }
+        ]
+      },
+      "dataSources": {
+        "primary": "ds_cmm_avg_mem"
+      },
+      "eventHandlers": [
+        {
+          "type": "drilldown.linkToSearch",
+          "options": {
+            "type": "auto",
+            "newTab": false
+          }
+        }
+      ],
+      "title": "CMM - Average Memory Usage by Host",
+      "showProgressBar": true,
+      "showLastUpdated": false,
+      "hideWhenNoData": true
+    },
+    "viz_bbc_avg_cpu": {
+      "type": "splunk.column",
+      "options": {
+        "legendDisplay": "off",
+        "y": "> primary | frameBySeriesNames('AvgCPU')"
+      },
+      "context": {
+        "gaugeColorRangeValueContext": [
+          {
+            "to": 10,
+            "value": "#5fbcff"
+          },
+          {
+            "from": 10,
+            "to": 30,
+            "value": "#4beba8"
+          },
+          {
+            "from": 30,
+            "to": 50,
+            "value": "#f4df7a"
+          },
+          {
+            "from": 50,
+            "to": 70,
+            "value": "#fc9850"
+          },
+          {
+            "from": 70,
+            "to": 100,
+            "value": "#ff7152"
+          }
+        ]
+      },
+      "dataSources": {
+        "primary": "ds_bbc_avg_cpu"
+      },
+      "eventHandlers": [
+        {
+          "type": "drilldown.linkToSearch",
+          "options": {
+            "type": "auto",
+            "newTab": false
+          }
+        }
+      ],
+      "title": "BBC - Average CPU Usage by Host",
+      "showProgressBar": true,
+      "showLastUpdated": false,
+      "hideWhenNoData": true
+    },
+    "viz_bbc_avg_mem": {
+      "type": "splunk.column",
+      "options": {
+        "legendDisplay": "off",
+        "y": "> primary | frameBySeriesNames('AvgMem')"
+      },
+      "context": {
+        "gaugeColorRangeValueContext": [
+          {
+            "to": 10,
+            "value": "#5fbcff"
+          },
+          {
+            "from": 10,
+            "to": 30,
+            "value": "#4beba8"
+          },
+          {
+            "from": 30,
+            "to": 50,
+            "value": "#f4df7a"
+          },
+          {
+            "from": 50,
+            "to": 70,
+            "value": "#fc9850"
+          },
+          {
+            "from": 70,
+            "to": 100,
+            "value": "#ff7152"
+          }
+        ]
+      },
+      "dataSources": {
+        "primary": "ds_bbc_avg_mem"
+      },
+      "eventHandlers": [
+        {
+          "type": "drilldown.linkToSearch",
+          "options": {
+            "type": "auto",
+            "newTab": false
+          }
+        }
+      ],
+      "title": "BBC - Average Memory Usage by Host",
+      "showProgressBar": true,
+      "showLastUpdated": false,
+      "hideWhenNoData": true
+    },
+    "viz_mns_avg_cpu": {
+      "type": "splunk.column",
+      "options": {
+        "legendDisplay": "off",
+        "y": "> primary | frameBySeriesNames('AvgCPU')"
+      },
+      "context": {
+        "gaugeColorRangeValueContext": [
+          {
+            "to": 10,
+            "value": "#5fbcff"
+          },
+          {
+            "from": 10,
+            "to": 30,
+            "value": "#4beba8"
+          },
+          {
+            "from": 30,
+            "to": 50,
+            "value": "#f4df7a"
+          },
+          {
+            "from": 50,
+            "to": 70,
+            "value": "#fc9850"
+          },
+          {
+            "from": 70,
+            "to": 100,
+            "value": "#ff7152"
+          }
+        ]
+      },
+      "dataSources": {
+        "primary": "ds_mns_avg_cpu"
+      },
+      "eventHandlers": [
+        {
+          "type": "drilldown.linkToSearch",
+          "options": {
+            "type": "auto",
+            "newTab": false
+          }
+        }
+      ],
+      "title": "MNS - Average CPU Usage by Host",
+      "showProgressBar": true,
+      "showLastUpdated": false,
+      "hideWhenNoData": true
+    },
+    "viz_mns_avg_mem": {
+      "type": "splunk.column",
+      "options": {
+        "legendDisplay": "off",
+        "y": "> primary | frameBySeriesNames('AvgMem')"
+      },
+      "context": {
+        "gaugeColorRangeValueContext": [
+          {
+            "to": 10,
+            "value": "#5fbcff"
+          },
+          {
+            "from": 10,
+            "to": 30,
+            "value": "#4beba8"
+          },
+          {
+            "from": 30,
+            "to": 50,
+            "value": "#f4df7a"
+          },
+          {
+            "from": 50,
+            "to": 70,
+            "value": "#fc9850"
+          },
+          {
+            "from": 70,
+            "to": 100,
+            "value": "#ff7152"
+          }
+        ]
+      },
+      "dataSources": {
+        "primary": "ds_mns_avg_mem"
+      },
+      "eventHandlers": [
+        {
+          "type": "drilldown.linkToSearch",
+          "options": {
+            "type": "auto",
+            "newTab": false
+          }
+        }
+      ],
+      "title": "MNS - Average Memory Usage by Host",
+      "showProgressBar": true,
+      "showLastUpdated": false,
+      "hideWhenNoData": true
+    }
+  },
+  "dataSources": {
+    "ds_cmm_avg_cpu": {
+      "type": "ds.search",
+      "options": {
+        "query": "| inputlookup lantern_example.csv\n| search Group=\"CMM\"\n| where \"$row_tok$\" = \"AvgCPU\" OR \"$row_tok$\"=\"All\"\n| stats max(AvgCpuUsage) as AvgCPU by Hostname",
+        "queryParameters": {
+          "earliest": "0"
+        }
+      },
+      "name": "CMM Avg CPU Usage by Host"
+    },
+    "ds_cmm_avg_mem": {
+      "type": "ds.search",
+      "options": {
+        "query": "| inputlookup lantern_example.csv\n| search Group=\"CMM\"\n| where \"$row_tok$\" = \"AvgMem\" OR \"$row_tok$\"=\"All\"\n| where \"$row_tok$\"=\"AvgMem\" OR \"$row_tok$\"=\"All\"\n| stats max(AvgMemoryUsage) as AvgMem by Hostname",
+        "queryParameters": {
+          "earliest": "0"
+        }
+      },
+      "name": "CMM - Average Memory Usage by Host"
+    },
+    "ds_bbc_avg_cpu": {
+      "type": "ds.search",
+      "options": {
+        "query": "| inputlookup lantern_example.csv\n| search Group=\"BBC\"\n| where \"$row_tok$\" = \"AvgCPU\" OR \"$row_tok$\"=\"All\"\n| stats max(AvgCpuUsage) as AvgCPU by Hostname",
+        "queryParameters": {
+          "earliest": "0"
+        }
+      },
+      "name": "BBC - Average CPU Usage by Host"
+    },
+    "ds_bbc_avg_mem": {
+      "type": "ds.search",
+      "options": {
+        "query": "| inputlookup lantern_example.csv\n| search Group=\"BBC\"\n| where \"$row_tok$\" = \"AvgMem\" OR \"$row_tok$\"=\"All\"\n| stats max(AvgMemoryUsage) as AvgMem by Hostname",
+        "queryParameters": {
+          "earliest": "0"
+        }
+      },
+      "name": "BBC - Average Memory Usage by Host - Filler gauge search"
+    },
+    "ds_mns_avg_cpu": {
+      "type": "ds.search",
+      "options": {
+        "query": "| inputlookup lantern_example.csv\n| search Group=\"MNS\"\n| where \"$row_tok$\" = \"AvgCPU\" OR \"$row_tok$\"=\"All\"\n| stats max(AvgCpuUsage) as AvgCPU by Hostname",
+        "queryParameters": {
+          "earliest": "0"
+        }
+      },
+      "name": "MNS - Average CPU Usage by Host"
+    },
+    "ds_mns_avg_mem": {
+      "type": "ds.search",
+      "options": {
+        "query": "| inputlookup lantern_example.csv\n| search Group=\"MNS\"\n| where \"$row_tok$\" = \"AvgMem\" OR \"$row_tok$\"=\"All\"\n| stats max(AvgMemoryUsage) as AvgMem by Hostname",
+        "queryParameters": {
+          "earliest": "0"
+        }
+      },
+      "name": "MNS - Average Memory Usage by Host - Filler gauge search"
+    }
+  },
+  "defaults": {
+    "dataSources": {
+      "ds.search": {
+        "options": {
+          "queryParameters": {}
+        }
+      }
+    }
+  },
+  "inputs": {
+    "input_metric": {
+      "type": "input.dropdown",
+      "options": {
+        "items": [
+          {
+            "value": "All",
+            "label": "All"
+          },
+          {
+            "value": "AvgCPU",
+            "label": "CPU"
+          },
+          {
+            "value": "AvgMem",
+            "label": "Memory"
+          }
+        ],
+        "token": "row_tok",
+        "selectFirstSearchResult": true
+      },
+      "title": "Metric"
+    }
+  },
+  "layout": {
+    "type": "grid",
+    "options": {
+      "height": 1000,
+      "width": 1440
+    },
+    "structure": [
+      {
+        "item": "viz_cmm_avg_cpu",
+        "type": "block",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "w": 720,
+          "h": 250
+        }
+      },
+      {
+        "item": "viz_bbc_avg_cpu",
+        "type": "block",
+        "position": {
+          "x": 0,
+          "y": 250,
+          "w": 720,
+          "h": 250
+        }
+      },
+      {
+        "item": "viz_mns_avg_cpu",
+        "type": "block",
+        "position": {
+          "x": 0,
+          "y": 500,
+          "w": 720,
+          "h": 250
+        }
+      },
+      {
+        "item": "viz_cmm_avg_mem",
+        "type": "block",
+        "position": {
+          "x": 720,
+          "y": 0,
+          "w": 720,
+          "h": 250
+        }
+      },
+      {
+        "item": "viz_bbc_avg_mem",
+        "type": "block",
+        "position": {
+          "x": 720,
+          "y": 250,
+          "w": 720,
+          "h": 250
+        }
+      },
+      {
+        "item": "viz_mns_avg_mem",
+        "type": "block",
+        "position": {
+          "x": 720,
+          "y": 500,
+          "w": 720,
+          "h": 250
+        }
+      }
+    ],
+    "globalInputs": [
+      "input_metric"
+    ]
+  },
+  "description": "",
+  "title": "Resource Usage by Group: Panels (Dashboard Studio)"
+}

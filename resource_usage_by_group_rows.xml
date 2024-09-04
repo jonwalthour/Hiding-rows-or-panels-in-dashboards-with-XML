@@ -1,0 +1,180 @@
+<form theme="dark" version="1.1">
+  <label>Resource Usage by Group: Rows</label>
+  <fieldset submitButton="false">
+    <input type="dropdown" token="row_tok" searchWhenChanged="true">
+      <label>Application Group</label>
+      <choice value="*">All</choice>
+      <choice value="CMM">CMM</choice>
+      <choice value="BBC">BBC</choice>
+      <choice value="MNS">MNS</choice>
+      <default>*</default>
+      <initialValue>*</initialValue>
+      <change>
+        <condition label="All">
+          <set token="CMM_token">true</set>
+          <set token="BBC_token">true</set>
+          <set token="MNS_token">true</set>
+        </condition>
+        <condition label="CMM">
+          <set token="CMM_token">true</set>
+          <unset token="BBC_token"></unset>
+          <unset token="MNS_token"></unset>
+        </condition>
+        <condition label="BBC">
+          <unset token="CMM_token">true</unset>
+          <set token="BBC_token">true</set>
+          <unset token="MNS_token"></unset>
+        </condition>
+        <condition label="MNS">
+          <unset token="CMM_token"></unset>
+          <unset token="BBC_token"></unset>
+          <set token="MNS_token">true</set>
+        </condition>
+      </change>
+    </input>
+  </fieldset>
+  <row depends="$CMM_token$">
+    <panel>
+      <title>CMM - Average CPU Usage by Host</title>
+      <chart>
+        <search>
+          <query>| inputlookup lantern_example.csv
+          | search Group="CMM"
+          | stats max(AvgCpuUsage) as AvgCPU by Hostname</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.visibility">collapsed</option>
+        <option name="charting.axisTitleY2.visibility">collapsed</option>
+        <option name="charting.chart">fillerGauge</option>
+        <option name="charting.chart.showDataLabels">none</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisEnd</option>
+        <option name="charting.legend.placement">bottom</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="trellis.enabled">1</option>
+        <option name="trellis.size">small</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>CMM - Average Memory Usage by Host</title>
+      <chart>
+        <search>
+          <query>| inputlookup lantern_example.csv
+          | search Group="CMM"
+          | stats max(AvgMemoryUsage) as AvgMem by Hostname</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.visibility">collapsed</option>
+        <option name="charting.axisTitleY2.visibility">collapsed</option>
+        <option name="charting.chart">fillerGauge</option>
+        <option name="charting.chart.showDataLabels">none</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisEnd</option>
+        <option name="charting.legend.placement">bottom</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="trellis.enabled">1</option>
+        <option name="trellis.size">small</option>
+      </chart>
+    </panel>
+  </row>
+  <row depends="$BBC_token$">
+    <panel>
+      <title>BBC - Average CPU Usage by Host</title>
+      <chart>
+        <search>
+          <query>| inputlookup lantern_example.csv
+          | search Group="BBC"
+          | stats max(AvgCpuUsage) as AvgCPU by Hostname</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.visibility">collapsed</option>
+        <option name="charting.axisTitleY2.visibility">collapsed</option>
+        <option name="charting.chart">fillerGauge</option>
+        <option name="charting.chart.showDataLabels">none</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisEnd</option>
+        <option name="charting.legend.placement">bottom</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="trellis.enabled">1</option>
+        <option name="trellis.size">small</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>BBC - Average Memory Usage by Host</title>
+      <chart>
+        <search>
+          <query>| inputlookup lantern_example.csv
+          | search Group="BBC"
+          | stats max(AvgMemoryUsage) as AvgMem by Hostname</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.visibility">collapsed</option>
+        <option name="charting.axisTitleY2.visibility">collapsed</option>
+        <option name="charting.chart">fillerGauge</option>
+        <option name="charting.chart.showDataLabels">none</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisEnd</option>
+        <option name="charting.legend.placement">bottom</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="trellis.enabled">1</option>
+        <option name="trellis.size">small</option>
+      </chart>
+    </panel>
+  </row>
+  <row depends="$MNS_token$">
+    <panel>
+      <title>MNS - Average CPU Usage by Host</title>
+      <chart>
+        <search>
+          <query>| inputlookup lantern_example.csv
+          | search Group="MNS"
+          | stats max(AvgCpuUsage) as AvgCPU by Hostname</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.visibility">collapsed</option>
+        <option name="charting.axisTitleY2.visibility">collapsed</option>
+        <option name="charting.chart">fillerGauge</option>
+        <option name="charting.chart.showDataLabels">none</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisEnd</option>
+        <option name="charting.legend.placement">bottom</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="trellis.enabled">1</option>
+        <option name="trellis.size">small</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>MNS - Average Memory Usage by Host</title>
+      <chart>
+        <search>
+          <query>| inputlookup lantern_example.csv
+          | search Group="MNS"
+          | stats max(AvgMemoryUsage) as AvgMem by Hostname</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisTitleY.visibility">collapsed</option>
+        <option name="charting.axisTitleY2.visibility">collapsed</option>
+        <option name="charting.chart">fillerGauge</option>
+        <option name="charting.chart.showDataLabels">none</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisEnd</option>
+        <option name="charting.legend.placement">bottom</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="trellis.enabled">1</option>
+        <option name="trellis.size">small</option>
+      </chart>
+    </panel>
+  </row>
+</form>
